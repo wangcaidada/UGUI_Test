@@ -442,8 +442,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u8BF7\u8F93\u5165\u603B\u65F6\u95F4\uFF08\u79D2\uFF09"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 69dd43d3d53995e4d8640fc0daa1911c, type: 2}
-  m_sharedMaterial: {fileID: 4080581516211707638, guid: 69dd43d3d53995e4d8640fc0daa1911c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9fbd275616401004eafe9abfde4059f7, type: 2}
+  m_sharedMaterial: {fileID: -6643340780581029135, guid: 9fbd275616401004eafe9abfde4059f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -577,8 +577,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00:00:00
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 69dd43d3d53995e4d8640fc0daa1911c, type: 2}
-  m_sharedMaterial: {fileID: 4080581516211707638, guid: 69dd43d3d53995e4d8640fc0daa1911c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9fbd275616401004eafe9abfde4059f7, type: 2}
+  m_sharedMaterial: {fileID: -6643340780581029135, guid: 9fbd275616401004eafe9abfde4059f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -725,8 +725,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u5F00\u59CB\u8BA1\u65F6"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 69dd43d3d53995e4d8640fc0daa1911c, type: 2}
-  m_sharedMaterial: {fileID: 4080581516211707638, guid: 69dd43d3d53995e4d8640fc0daa1911c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9fbd275616401004eafe9abfde4059f7, type: 2}
+  m_sharedMaterial: {fileID: -6643340780581029135, guid: 9fbd275616401004eafe9abfde4059f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 1
-  m_GlobalFontAsset: {fileID: 11400000, guid: 69dd43d3d53995e4d8640fc0daa1911c, type: 2}
+  m_GlobalFontAsset: {fileID: 11400000, guid: 9fbd275616401004eafe9abfde4059f7, type: 2}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
   m_RestoreOriginalTextOnEscape: 1
@@ -1153,8 +1153,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 69dd43d3d53995e4d8640fc0daa1911c, type: 2}
-  m_sharedMaterial: {fileID: 4080581516211707638, guid: 69dd43d3d53995e4d8640fc0daa1911c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9fbd275616401004eafe9abfde4059f7, type: 2}
+  m_sharedMaterial: {fileID: -6643340780581029135, guid: 9fbd275616401004eafe9abfde4059f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
