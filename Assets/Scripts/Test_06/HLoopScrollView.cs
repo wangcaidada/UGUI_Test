@@ -37,9 +37,6 @@ public class HLoopScrollView : MonoBehaviour
     //尾索引
     private int _endIndex;
 
-    //第一个物体的索引
-    private int _startItemIndex;
-
     private void Awake()
     {
         //测试模拟数据
@@ -56,10 +53,10 @@ public class HLoopScrollView : MonoBehaviour
         _scrollTran = GetComponent<RectTransform>();
 
         _itemCache = new Dictionary<int, ListItem>();
-        _itemWidth = ItemPrefab.GetComponent<RectTransform>().sizeDelta.x;
-        _itemHeight = ItemPrefab.GetComponent<RectTransform>().sizeDelta.y;
-        _viewPortWidth = _scrollRect.viewport.sizeDelta.x;
-        _viewPortHeight = _scrollRect.viewport.sizeDelta.y;
+        _itemWidth = ItemPrefab.GetComponent<RectTransform>().rect.width;
+        _itemHeight = ItemPrefab.GetComponent<RectTransform>().rect.height;
+        _viewPortWidth = _scrollRect.viewport.rect.width;
+        _viewPortHeight = _scrollRect.viewport.rect.height;
 
         //计算最小缓存数量
         _itemCacheNum = (int)Math.Ceiling(_viewPortWidth / (_itemWidth + Spacing)) + 2;
@@ -78,7 +75,7 @@ public class HLoopScrollView : MonoBehaviour
         if(_itemCacheNum > 0)
         {
             //初始化Content大小
-            _scrollRect.content.sizeDelta = new Vector2((_itemWidth + Spacing) * ItemData.Count, _viewPortHeight);
+            _scrollRect.content.sizeDelta = new Vector2((_itemWidth + Spacing) * ItemData.Count-Spacing, _viewPortHeight);
             //初始化缓存物体
             for (int i = 0; i < _itemCacheNum; i++)
             {
@@ -107,10 +104,10 @@ public class HLoopScrollView : MonoBehaviour
                 pos = new Vector2(index * (_itemWidth + Spacing), 0);
                 break;
             case ItemPos.Mid:
-                float surLen = _scrollRect.content.sizeDelta.y - _itemHeight;
+                float surLen = _scrollRect.content.rect.height - _itemHeight;
                 if (surLen > 0)
                 {
-                    pos = new Vector2(index * (_itemWidth + Spacing), -(_scrollRect.content.sizeDelta.y-_itemHeight)/2);
+                    pos = new Vector2(index * (_itemWidth + Spacing), -(_scrollRect.content.rect.height-_itemHeight)/2);
                 }
                 else
                 {
@@ -118,7 +115,7 @@ public class HLoopScrollView : MonoBehaviour
                 }
                 break;
             case ItemPos.Bottom:
-                pos = new Vector2(index * (_itemWidth + Spacing), -_scrollRect.content.sizeDelta.y + _itemHeight);
+                pos = new Vector2(index * (_itemWidth + Spacing), -_scrollRect.content.rect.height + _itemHeight);
                 break;
             default:
                 pos = new Vector2(index * (_itemWidth + Spacing), 0);
@@ -156,7 +153,7 @@ public class HLoopScrollView : MonoBehaviour
         {
             //如果尾物体超出自身加间隔的距离,并且尾物体后还有物体则交换位置设置新数据
             Vector2 endPos = GetItemPosFromIndex(_endIndex);
-            if (_scrollRect.content.anchoredPosition.x-_viewPortWidth > -endPos.x-Spacing)
+            if (_scrollRect.content.anchoredPosition.x-_viewPortWidth > -endPos.x+Spacing)
             {
                 //如果需要填充尾部
                 if (_startIndex - 1 > -1)
